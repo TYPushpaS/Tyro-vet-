@@ -1,0 +1,123 @@
+<div class="container card card-body col-md-4 offset-4 mt-5">
+    <form action="" #addRequirment='ngForm' (ngSubmit)='addRequirments(addRequirment)' id="add">
+        <br>
+        <h1 style="color: turquoise;" style="text-align: center">Add Requirment</h1>
+        <div class="form-row mt-3">
+            <div class="form-group col-md-6">
+                <input type="text" name="client" #client='ngModel' ngModel id="" class="form-control" required
+                    placeholder="enter client name">
+            </div>
+            <div *ngIf="client.touched && client.invalid">
+                <div class="alert alert-danger" *ngIf="client.errors.required"><small style="text-align: right">This field is required</small></div>
+            </div>
+            <div class="form-group col-md-6">
+                <select class="form-control" id="input" name="technology" #technology='ngModel' ngModel required>
+                    <option value="" selected disabled hidden>Enter the technology needed</option>
+                    <option>Java Full Stack</option>
+                    <option>Core Java</option>
+                    <option>Mean Stack</option>
+                    <option>Data Science</option>
+                    <option>Mearn</option>
+                    <option>Dot Net</option>
+                    <option>Others</option>
+                </select>
+            </div>
+            <div *ngIf="technology.touched && technology.invalid">
+                <div class="alert alert-danger" *ngIf="technology.errors.required"><small style="text-align: right">
+                        This field is required</small></div>
+            </div>
+        </div>
+        <div class="form-row mt-3">
+            <div class="form-group col-md-6">
+                <select class="form-control" id="input" name="yoe" #yoe='ngModel' ngModel required>
+                    <option value="" selected disabled hidden>Enter Year of Experience</option>
+                    <option>0.6</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5+</option>
+                </select>
+            </div>
+            <div *ngIf="yoe.touched && yoe.invalid">
+                <div class="alert alert-danger" *ngIf="yoe.errors.required"><small style="text-align: right"> This field
+                        is required</small></div>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name="location" #location='ngModel' ngModel id="" class="form-control" required
+                    placeholder="enter location...">
+            </div>
+            <div *ngIf="location.touched && location.invalid">
+                <div class="alert alert-danger" *ngIf="location.errors.required"><small style="text-align: right"> This
+                        field is required</small></div>
+            </div>
+        </div>
+        <div class="form-row mt-3 ">
+            <div class="form-group col-md-6">
+                <input type="number" name="nop" #nop='ngModel' ngModel id="" class="form-control" required
+                    placeholder="enter number of position..">
+            </div>
+            <div *ngIf="nop.touched && nop.invalid">
+                <div class="alert alert-danger" *ngIf="nop.errors.required"><small style="text-align: right">This field
+                        is required</small></div>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="date" name="odate" #odate='ngModel' ngModel id="" class="form-control" required
+                    placeholder="enter opening date...">
+            </div>
+            <div *ngIf="odate.touched && odate.invalid">
+                <div class="alert alert-danger" *ngIf="odateerrors.required"><small style="text-align: right">This field
+                        is required</small></div>
+            </div>
+        </div>
+        <div class="form-row mt-3">
+            <div class="form-group col-md-6">
+                <input type="date" name="cdate" #cdate='ngModel' ngModel id="" class="form-control" required
+                    placeholder="enter closing date...">
+            </div>
+            <div *ngIf="cdate.touched && cdate.invalid">
+                <div class="alert alert-danger" *ngIf="cdate.errors.required"><small style="text-align: right">This
+                        field is required</small></div>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name="role" #role='ngModel' ngModel id="" class="form-control" required
+                    placeholder="enter role...">
+            </div>
+            <div *ngIf="role.touched && role.invalid">
+                <div class="alert alert-danger" *ngIf="role.errors.required"><small style="text-align: right">This field
+                        is required</small></div>
+            </div>
+        </div>
+        <div class="form-row mt-3">
+            <div class="form-group col-md-6">
+                <input type="number" name="rate" #rate='ngModel' ngModel id="" class="form-control" required
+                    placeholder="enter rate card...">
+            </div>
+            <div *ngIf="rate.touched && rate.invalid">
+                <div class="alert alert-danger" *ngIf="rate.errors.required"><small style="text-align: right">This field
+                        is required</small></div>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name="poc" #poc='ngModel' ngModel id="" class="form-control" required
+                    placeholder="enter poc person...">
+            </div>
+            <div *ngIf="poc.touched && poc.invalid">
+                <div class="alert alert-danger" *ngIf="poc.errors.required"><small style="text-align: right"> This
+                        field is required</small></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea name="message" form="add" #message='ngModel' ngModel rows="10" cols="100" class="form-control"
+                required placeholder="enter job description..."></textarea>
+            
+        </div>
+        <div *ngIf="jd.touched && jd.invalid">
+            <div class="alert alert-danger" *ngIf="jd.errors.required"><small style="text-align: right"> This field is required</small></div>
+        </div>
+        <div>
+            <button type="submit" [disabled]='addRequirment.invalid'
+                class="btn btn-outline-warning float-right">Add</button>
+        </div>
+       
+    </form>
+</div>

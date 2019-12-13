@@ -1,0 +1,36 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-4 offset-md-3">
+            <form action="" #reqform='ngForm' (ngSubmit)='addreq(reqform)' class="form-container">
+                <h1 style="text-align: center;color:blueviolet;font-family: fantasy; "> Update Requirment!!</h1><br>
+                <div class="form-group"> <input type="hidden" name='clientId' #clientId='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.clientId' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='client' #client='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.client' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='technology' #technology='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.technology' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='yoe' #yoe='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.yoe' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='location' #location='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.location' class="form-control"> </div>
+                <div class="form-group"> <input type="number" name='nop' #nop='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.nop' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='odate' #odate='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.odate' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='cdate' #cdate='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.cdate' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='role' #role='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.role' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='rate' #rate='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.rate' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='poc' #poc='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.poc' class="form-control"> </div>
+                <div class="form-group"> <input type="text" name='jd' #jd='ngModel'
+                        [(ngModel)]='reqService.selectedRequirment.jd' class="form-control"> </div>
+
+                <div class="form-group"> <button type="submit"
+                        class="btn btn-dark col-md-6 form-control float-right">Update</button> </div>
+            </form>
+        </div>
+    </div>
+</div>
